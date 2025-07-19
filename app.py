@@ -10,38 +10,37 @@ st.set_page_config(
     layout="wide",
 )
 
-# Custom CSS for vibrant look
+
 st.markdown("""
     <style>
-        .main {
-            background-color: #0e1117;
+     body {
+            background-color: #1e1e1e !important;
         }
-        .stButton>button {
-            background-color: #4CAF50;
-            color: white;
-            font-weight: bold;
-            border-radius: 10px;
+        .stApp {
+            background-color: #1e1e1e!important;
         }
-        .stTextArea textarea {
-            background-color: #ffffff;
-            color: #000000;  /* <--- This fixes invisible text */
-            border: 1px solid #ccc;
-            font-size: 16px;
-            border-radius: 8px;
-        }
-        .stDownloadButton>button {
-            background-color: #2196F3;
-            color: white;
-            font-weight: bold;
-            border-radius: 10px;
-        }
+
+    /* Hide Streamlit sidebar, top menu, and footer */
+    #MainMenu, footer, header {
+        visibility: hidden;
+    }
+
+    /* Style text area (transcription box) */
+    .stTextArea textarea {
+        background-color:#ffffff !important;
+        color:  #222222  !important;
+        font-family: 'Courier New', monospace;
+        font-size: 16px;
+        border-radius: 10px;
+        padding: 10px;
+    }
     </style>
 """, unsafe_allow_html=True)
 
 
 # Title and description
 st.markdown("# 🎧 **VocalMinutes**")
-st.markdown("### _Convert your audio recordings into clean, readable text!_")
+st.markdown("### _Convert your meeting minutes into clean, readable text!_")
 
 # Upload audio
 st.markdown("## 📁 Upload Audio File")
